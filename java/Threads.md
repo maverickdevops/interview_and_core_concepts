@@ -21,4 +21,4 @@ In Java, a thread can be in one of the following states:
 
 Visual representation is here
 
-![Alt text](images/java/processVSthreads.png)
+![Alt text](/images/java/processVSthreads.png)
