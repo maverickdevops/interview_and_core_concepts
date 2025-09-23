@@ -1,6 +1,6 @@
 # Java Garbage Collection
 
-## Concepts
+## 1. Concepts
 
 Garbage Collection (GC) in Java is the process of automatically identifying and disposing of objects that are no longer needed by a program, freeing up memory resources. Key concepts include:
 
@@ -9,7 +9,7 @@ Garbage Collection (GC) in Java is the process of automatically identifying and 
 3. **Mark and Sweep**: A common garbage collection algorithm that marks reachable objects and sweeps away unmarked objects.
 4. **Generational Garbage Collection**: Divides the heap into generations (Young, Old, and Permanent) to optimize the collection process. Most objects are short-lived and collected in the Young generation.
 
-## Use Cases
+## 2. Use Cases
 
 1. **Memory Management**: Automatically manages memory allocation and deallocation, reducing memory leaks.
 2. **Performance Optimization**: Helps in optimizing application performance by reclaiming memory from unused objects.
@@ -34,19 +34,19 @@ Disadvantages of GC
 2. Programmers cannot control the CPU time scheduling.
 3. Proper GC implementation is needed or it may harm the app or crashing of app.
 
-## GC Implementation
+## 3. GC Implementation
 
 1. **Serial Garbage collector**
 2. **Parallel garbage collector**
 3. **G1 Garbage collector**
 4. **Z Garbage Collector**
 
-## Serial Garbage Collector
+## 4. Serial Garbage Collector
 
 1. Works on Single thread. GC Implementation freezes all the application threads when it runs. Probably not a good idea to use it when multi threaded applications.
 2. To enable it - java -XX:+UseSerialGC -jar Application.java
 
-## Parallel Garbage Collector
+## 5. Parallel Garbage Collector
 
 1. Default GC of the JVM from java5 to java8.
 2. Uses multiple threads to manage heap space.
@@ -54,14 +54,14 @@ Disadvantages of GC
 4. We can specify max garbage collection threads and pause time, throughput and footprint (heap size)
 5. Can be configured - java -XX:+UseParallelGC -jar Application.java
 
-## G1 Garbage collector
+## 6. G1 Garbage collector
 
 1. Is designed for applications running on multi processor machine with large memory space.
 2. It marks first and then tracks.
 3. Second phase will be to sweep and clear the memory off. hence the name G1 or the garbage first.
 4. can be configured - java -XX:+UseG1GC -jar Application.java
 
-## Z Garbage collector
+## 7. Z Garbage collector
 
 1. without stopping the execution of application threads for more than 10ms.
 2. suitable for low latency app
