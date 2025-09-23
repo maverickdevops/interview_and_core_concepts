@@ -18,3 +18,7 @@ In Java, a thread can be in one of the following states:
 | Overhead      | Higher overhead due to separate memory allocation. | Lower overhead as threads share resources.                       |
 | Communication | Inter-process communication (IPC) is required.     | Threads can communicate directly since they share memory.        |
 | Creation      | Creating a process is more time-consuming.         | Creating a thread is faster and more efficient.                  |
+
+Visual representation is here
+
+![Alt text](images/java/processVSthreads.png)
