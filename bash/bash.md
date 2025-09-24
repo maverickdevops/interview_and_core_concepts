@@ -113,4 +113,10 @@ Resources:
 
 ```
 
-- PUBLIC_IF and PRIVATE_IF, must be substituted by the actual IP address of the EC2 network interfaces.
+- echo 1 > /proc/sys/net/ipv4/ip_forward enables packet forwarding immediately.
+- Adding it to /etc/sysctl.conf makes it persistent across reboots.
+- iptables rules:
+  - POSTROUTING MASQUERADE handles NAT for outbound traffic.
+  - FORWARD rules allow traffic from private to public and back.
+- iptables-persistent or netfilter-persistent saves rules across reboots.
+- Adjust PUBLIC_IF and PRIVATE_IF according to your EC2 network interfaces.
