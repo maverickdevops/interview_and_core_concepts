@@ -20,15 +20,17 @@
     - Telemetry - Ceilometer
   - Installing all the above on all the hosts was manual. So I created a bash script to install by just dropping the script and running it via ssh.
   - Most of the script was simple
-    `    
-    #!bin/bash
-    sudo apt update && sudo apt upgrade -y
-    supo apt install <package> -y
-    sudo cp <file1> <file>
-    sudo tee <path/file> <<EOF <lines of config> 
-    EOF
-    sudo systemctl restart <service>
- `
+
+    ```
+        #!bin/bash
+        sudo apt update && sudo apt upgrade -y
+        supo apt install <package> -y
+        sudo cp <file1> <file>
+        sudo tee <path/file> <<EOF <lines of config>
+        EOF
+        sudo systemctl restart <service>
+
+    ```
   * ViPR SRM installation.
   * Frontend module. (complex)
   * Installation itself was easy. But creating the connection to the DBs was hard to login and manually update the config files.
