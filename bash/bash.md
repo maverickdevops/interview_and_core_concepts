@@ -79,36 +79,36 @@ Resources:
 
 ```
     UserData:
-  Fn::Base64: |
-    #!/bin/bash
-    set -e
+        Fn::Base64: |
+            #!/bin/bash
+            set -e
 
-    # Enable IP forwarding
-    echo "1" > /proc/sys/net/ipv4/ip_forward
+            # Enable IP forwarding
+            echo "1" > /proc/sys/net/ipv4/ip_forward
 
-    # Make it persistent across reboots
-    if ! grep -q "^net.ipv4.ip_forward=1" /etc/sysctl.conf; then
-      echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
-    fi
-    sysctl -p
+            # Make it persistent across reboots
+            if ! grep -q "^net.ipv4.ip_forward=1" /etc/sysctl.conf; then
+            echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
+            fi
+            sysctl -p
 
-    # Define network interfaces
-    # eth0 -> public interface
-    # eth1 -> private interface (adjust as needed)
-    PUBLIC_IF="eth0"
-    PRIVATE_IF="eth1"
+            # Define network interfaces
+            # eth0 -> public interface
+            # eth1 -> private interface (adjust as needed)
+            PUBLIC_IF="eth0"
+            PRIVATE_IF="eth1"
 
-    # Enable IP Masquerade (NAT)
-    iptables -t nat -A POSTROUTING -o $PUBLIC_IF -j MASQUERADE
-    iptables -A FORWARD -i $PUBLIC_IF -o $PRIVATE_IF -m state --state RELATED,ESTABLISHED -j ACCEPT
-    iptables -A FORWARD -i $PRIVATE_IF -o $PUBLIC_IF -j ACCEPT
+            # Enable IP Masquerade (NAT)
+            iptables -t nat -A POSTROUTING -o $PUBLIC_IF -j MASQUERADE
+            iptables -A FORWARD -i $PUBLIC_IF -o $PRIVATE_IF -m state --state RELATED,ESTABLISHED -j ACCEPT
+            iptables -A FORWARD -i $PRIVATE_IF -o $PUBLIC_IF -j ACCEPT
 
-    # Save iptables rules to survive reboot (Ubuntu/Debian)
-    apt update -y
-    apt install -y iptables-persistent
-    netfilter-persistent save
+            # Save iptables rules to survive reboot (Ubuntu/Debian)
+            apt update -y
+            apt install -y iptables-persistent
+            netfilter-persistent save
 
-    echo "IP Masquerade enabled successfully"
+            echo "IP Masquerade enabled successfully"
 
 
 ```
