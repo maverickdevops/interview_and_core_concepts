@@ -7,6 +7,7 @@
   * Auto download these files on another machine when they become available.
   * Cron job set to download from the ftp.
 - Few automation in Openstack installation.
+
   - Services included.
     - Nova - compute
     - Neutron - networking
@@ -31,6 +32,7 @@
         sudo systemctl restart <service>
 
     ```
+
   * ViPR SRM installation.
   * Frontend module. (complex)
   * Installation itself was easy. But creating the connection to the DBs was hard to login and manually update the config files.
@@ -72,3 +74,43 @@ Resources:
 
                     systemctl restart <>
 ```
+
+# Bash used in IP Masquerade for making the EC2 work as a Gateway between Client and internal EC2s.
+
+```
+    UserData:
+  Fn::Base64: |
+    #!/bin/bash
+    set -e
+
+    # Enable IP forwarding
+    echo "1" > /proc/sys/net/ipv4/ip_forward
+
+    # Make it persistent across reboots
+    if ! grep -q "^net.ipv4.ip_forward=1" /etc/sysctl.conf; then
+      echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
+    fi
+    sysctl -p
+
+    # Define network interfaces
+    # eth0 -> public interface
+    # eth1 -> private interface (adjust as needed)
+    PUBLIC_IF="eth0"
+    PRIVATE_IF="eth1"
+
+    # Enable IP Masquerade (NAT)
+    iptables -t nat -A POSTROUTING -o $PUBLIC_IF -j MASQUERADE
+    iptables -A FORWARD -i $PUBLIC_IF -o $PRIVATE_IF -m state --state RELATED,ESTABLISHED -j ACCEPT
+    iptables -A FORWARD -i $PRIVATE_IF -o $PUBLIC_IF -j ACCEPT
+
+    # Save iptables rules to survive reboot (Ubuntu/Debian)
+    apt update -y
+    apt install -y iptables-persistent
+    netfilter-persistent save
+
+    echo "IP Masquerade enabled successfully"
+
+
+```
+
+- PUBLIC_IF and PRIVATE_IF, must be substituted by the actual IP address of the EC2 network interfaces.
