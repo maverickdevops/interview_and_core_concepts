@@ -106,6 +106,20 @@ graph TD
 
 ## Using TF providers
 
+- when terraform init is run in TF config folder, terraform downloads the plugins based on the resources type such as Aws, gcp, azure etc
+
+* registry.terraform.io
+* there are 3 tiers of provider.
+  1. Official such as AWS, GCP, Azure, local etc.
+  2. Partners such as heroku, digitalocean, bigip etc.
+  3. Community such as netapp, emc, ucloud etc.
+* plugins are stored in
+
+```
+~terraform/.terraform/providers/registry.terraform.io/hashicorp/local/2.5.3/darwin_arm64
+
+```
+
 ```mermaid
 graph TD
     A[Terraform Init] --> B[Terraform Configuration Folder]
@@ -115,3 +129,41 @@ graph TD
     C --> F[Azure Plugin]
     C --> G[Other Plugins]
 ```
+
+### configuration directory
+
+| File Name    | Purpose                                         |
+| ------------ | ----------------------------------------------- |
+| main.tf      | Main config file containing resource definition |
+| variables.tf | contains variable declarations                  |
+| outputs.tf   | Contains outputs from resource                  |
+| provider.tf  | Contains provider definition                    |
+
+## Multiple providers
+
+## Input variables
+
+- we create a variables.tf
+
+* type is optional.
+* if nothing is mentioned for type "any" is used.
+
+```
+var "<argument>"{
+    default = ""
+    type = string|number|bool|any|list|map|set|objects|tuples
+    description= <>
+}
+```
+
+| Type   | Description                                     |
+| ------ | ----------------------------------------------- |
+| string | Represents a single string value                |
+| number | Represents a numeric value                      |
+| bool   | Represents a boolean value (true/false)         |
+| any    | Accepts any type of value                       |
+| list   | Represents a collection of values in a sequence |
+| map    | Represents a collection of key-value pairs      |
+| set    | Represents a collection of unique values        |
+| object | Represents a complex type with named attributes |
+| tuple  | Represents a sequence of values of fixed types  |
