@@ -268,7 +268,3 @@ output "variable_name"{
     <arguments>
 }
 ```
-
-```
-
-```
