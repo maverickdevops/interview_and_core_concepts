@@ -274,3 +274,37 @@ output "variable_name"{
 - its mandatory
 - store the relflection of config files
 - remote storage is required when working in team setup as the state files keep updating and will lead to confusion.
+- example - s3, gcp bucket, hashicorp consul etc.
+
+## Terraform Commands
+
+- terraform validate - can be used to check the syntax and other details.
+- terraform fmt - formats the code into canonical format
+- terraform state - shows the current state of the resources and its details
+- terroform state -json
+- terraform providers - shows all the providers.
+- terrform output - prints the resource details on screen
+- terraform graph - maps the execution plan. Output can be visualised by using graphviz.
+  install graphviz
+  terraform graph | dot -Tsvg > graph.svg
+
+## immutable and mutaable infra
+
+- mutable - not good. its inplace upgrades and changes. Eventually it gets hard to manage the resource and may result in config drift.
+- immutable - good. we remove the old infra and create a new one in its place.
+
+## Lifecycle rules
+
+- create_before_destroy = true
+
+```
+ resources "local_file" "pet" {
+        filename = var.filename
+        content = "My favourite per is ${random_pet.my-pet.id}
+
+        lifecycle {
+            create_before_destroy = true
+        }
+    }
+
+```
