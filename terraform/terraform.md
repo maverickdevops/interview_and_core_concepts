@@ -27,3 +27,11 @@ graph TD
     A --> E[GCP]
     A --> F[Azure]
 ```
+
+- TF uses HCL - "Hashicorp Configuration language".
+
+* States - init, plan, apply
+* it is a declarative language.
+* resources are the serices in cloud
+* TF state stores the blueprint of infra created by TF. terraform.tfstate (file)
+* TF can import the resources created outside the TF via manual or other means and give us better control over the resources.
