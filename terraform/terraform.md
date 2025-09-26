@@ -327,3 +327,35 @@ output "variable_name"{
 | Keyword : resources              | Keyword : data        |
 | Creates, Updates, Destroys Infra | Read Only infra       |
 | Also clled maanged resources     | Called data resources |
+
+## Meta arguments
+
+- Lifecycle
+- count
+- depends on
+- example below
+
+```
+    resource "local_fiel" "pet" {
+        filename = var.filename[count.index]
+        count = length(var.filename)
+    }
+
+```
+
+```
+    variable "filename" {
+        default = [
+            "/root/pets.txt"
+            "/root/dogs.txt"
+            "/root/cats.txt"
+        ]
+    }
+
+```
+
+| Function | Description                                               | Example Input               | Example Output |
+| -------- | --------------------------------------------------------- | --------------------------- | -------------- |
+| `length` | Returns the number of elements in a list, map, or string. | `length(["a", "b", "c"])`   | `3`            |
+|          |                                                           | `length({"key1" = "val1"})` | `1`            |
+|          |                                                           | `length("hello")`           | `5`            |
