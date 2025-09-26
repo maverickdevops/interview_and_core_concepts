@@ -268,3 +268,9 @@ output "variable_name"{
     <arguments>
 }
 ```
+
+## Terraform State
+
+- its mandatory
+- store the relflection of config files
+- remote storage is required when working in team setup as the state files keep updating and will lead to confusion.
