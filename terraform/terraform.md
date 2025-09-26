@@ -315,3 +315,15 @@ output "variable_name"{
 | `create_before_destroy` | Ensures new resources are created before the old ones are destroyed.                      |
 | `prevent_destroy`       | Prevents the resource from being destroyed, even if it is removed from the configuration. |
 | `ignore_changes`        | Specifies resource attributes to ignore during updates to prevent unintended changes.     |
+
+## Data Sources
+
+- if the resources are created via non terraform stack, they can be pulled under TF to readonly.
+- below diagram shows how thats possible
+  ![Alt text](/terraform/images/data_sources.png)
+
+| Resources                        | Data Sources          |
+| -------------------------------- | --------------------- |
+| Keyword : resources              | Keyword : data        |
+| Creates, Updates, Destroys Infra | Read Only infra       |
+| Also clled maanged resources     | Called data resources |
