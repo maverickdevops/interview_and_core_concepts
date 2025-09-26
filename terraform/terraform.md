@@ -103,3 +103,15 @@ graph TD
 - make a change to the main.tf.
 - terrform plan and then goto apply.
 - terraform destroy will destroy/delete the resource
+
+## Using TF providers
+
+```mermaid
+graph TD
+    A[Terraform Init] --> B[Terraform Configuration Folder]
+    B --> C[Resource Types]
+    C --> D[AWS Plugin]
+    C --> E[GCP Plugin]
+    C --> F[Azure Plugin]
+    C --> G[Other Plugins]
+```
