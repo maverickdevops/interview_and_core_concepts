@@ -97,3 +97,9 @@ graph TD
     H --> I[Arguments_AWS]
     H --> J[Arguments_GCP]
 ```
+
+### updating and destroying resources
+
+- make a change to the main.tf.
+- terrform plan and then goto apply.
+- terraform destroy will destroy/delete the resource
