@@ -73,3 +73,27 @@ brew upgrade hashicorp/tap/terraform
 
 - local will be replaced by cloud provider i.e. aws, gcp, azure etc.
 - file will be replaced by the resource type i.e. ec2, spanner etc.
+
+* A terraform workflow consists of 4 steps.
+
+1. write the config file.
+2. init i.e. terraform init
+3. plan i.e. terraform plan
+4. Apply i.e. terraform apply
+
+### mapping of each line in hcl
+
+```mermaid
+graph TD
+    A[Terraform] --> B[Provider]
+    B --> C[AWS]
+    B --> D[GCP]
+
+    A --> E[Resource Type]
+    E --> F[AWS Services]
+    E --> G[GCP Services]
+
+    A --> H[Arguments]
+    H --> I[Arguments_AWS]
+    H --> J[Arguments_GCP]
+```
