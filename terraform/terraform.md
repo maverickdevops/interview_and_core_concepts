@@ -16,3 +16,14 @@
 | Ansible                  | Docker            | Terraform          |
 | Puppet                   | Packer            | Cloudformation     |
 | SaltStack                | Vagrant           |                    |
+
+## Why Terraform?
+
+```mermaid
+graph TD
+    A[Terraform] --> B[Physical Machines]
+    A --> C[VMware]
+    A --> D[AWS]
+    A --> E[GCP]
+    A --> F[Azure]
+```
