@@ -167,3 +167,71 @@ var "<argument>"{
 | set    | Represents a collection of unique values        |
 | object | Represents a complex type with named attributes |
 | tuple  | Represents a sequence of values of fixed types  |
+
+## Variable definition files.
+
+- terraform.tfvars - tfvars can be a var definition file
+- terraform.tfvars.json
+
+* terraform.auto.tfvars
+* terraform.auto.tfvars.json
+
+```
+filename = "/root/big/pet.txt"
+content = "We love pets!"
+prefix = "Mr."
+separator = "."
+length = "2"
+```
+
+## variable definition precedence
+
+| Precedence Order | Source                                  | Description                                                               |
+| ---------------- | --------------------------------------- | ------------------------------------------------------------------------- |
+| 1                | Command-line `-var` or `-var-file` flag | Variables passed directly via CLI take the highest precedence.            |
+| 2                | `terraform.tfvars` file                 | Default variable definition file in the working directory.                |
+| 3                | `terraform.tfvars.json` file            | JSON format variable definition file in the working directory.            |
+| 4                | `*.auto.tfvars` files                   | Automatically loaded variable files in the working directory.             |
+| 5                | Environment variables                   | Variables defined with the `TF_VAR_` prefix in the environment.           |
+| 6                | Default values in `variables.tf`        | Default values specified in the variable block in the configuration file. |
+
+## Resource attributes
+
+- helps when there is dependencies between resources.
+
+```
+    resources "local_file" "pet" {
+        filename = var.filename
+        content = "My favourite per is ${random_pet.my-pet.id}
+    }
+
+    resource "random_pet" "my-pet" {
+        prefix = var.prefix
+        separator = var.separator
+        length = var.lengtjh
+    }
+
+```
+
+## Reference dependencies
+
+- TF is smart to understand the dependencies.
+- however, we can define it too
+
+```
+    resources "local_file" "pet" {
+        filename = var.filename
+        content = "My favourite per is ${random_pet.my-pet.id}
+
+        depends_on = [
+            random_pet.my-pet
+        ]
+    }
+
+    resource "random_pet" "my-pet" {
+        prefix = var.prefix
+        separator = var.separator
+        length = var.lengtjh
+    }
+
+```
