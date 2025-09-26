@@ -50,3 +50,26 @@ terraform -version
 ```
 brew upgrade hashicorp/tap/terraform
 ```
+
+- what is a resource?
+  An object that the TF manages. It can be anything e.g. EC2, DB etc.
+
+## Basics of HCL
+
+- HCL Syntax
+
+```
+<block> <parameters> {
+    key1 = value1
+    key2 = values2
+}
+```
+
+## What each line means?
+
+- Refer to the image below
+
+![Alt text](/terraform/images/hcl_syntax.png)
+
+- local will be replaced by cloud provider i.e. aws, gcp, azure etc.
+- file will be replaced by the resource type i.e. ec2, spanner etc.
