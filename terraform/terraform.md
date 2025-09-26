@@ -359,3 +359,32 @@ output "variable_name"{
 | `length` | Returns the number of elements in a list, map, or string. | `length(["a", "b", "c"])`   | `3`            |
 |          |                                                           | `length({"key1" = "val1"})` | `1`            |
 |          |                                                           | `length("hello")`           | `5`            |
+
+- Scenario
+  1. If I have 3 instances to be created i.e. pet, cats and dogs.
+  2. I can use the count in main.tf and variable file can have the list of instances.
+  3. if i need to remove one of the resources i.e. pet or cats or dogs. then all of them will be either be
+     - deleted and replaced
+     - deleted.
+  4. They will be deleted or deleted and replaced because , they are in a list (data type) and the index will change for these resources. When TF plan/apply is done, TF will see it as new resouce, hence it will mark it to delete and replace.
+  5. To avoid this recreation and deletion. we can use "for_each". but this will only work on "set or map" data types in variable.
+  6. "toset" wil convert the type(string) to type(set).
+
+```
+ resource "local_fiel" "pet" {
+        filename = each.value
+        for_each = toset(var.filename)
+    }
+```
+
+```
+    variable "filename" {
+        type = list(string)
+        default = [
+            "/root/pets.txt"
+            "/root/dogs.txt"
+            "/root/cats.txt"
+        ]
+    }
+
+```
