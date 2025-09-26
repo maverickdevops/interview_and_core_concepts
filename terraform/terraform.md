@@ -304,7 +304,14 @@ output "variable_name"{
 
         lifecycle {
             create_before_destroy = true
+            prevent_destroy = true  //or it can be
         }
     }
 
 ```
+
+| Lifecycle Rule          | Description                                                                               |
+| ----------------------- | ----------------------------------------------------------------------------------------- |
+| `create_before_destroy` | Ensures new resources are created before the old ones are destroyed.                      |
+| `prevent_destroy`       | Prevents the resource from being destroyed, even if it is removed from the configuration. |
+| `ignore_changes`        | Specifies resource attributes to ignore during updates to prevent unintended changes.     |
