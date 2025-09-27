@@ -31,3 +31,13 @@ Anything before this I did not add the notes as i have break sessions
 - Numeric functions - set, ceil,
 - String function - split, lower, upper, title, substr, join
 - Map functions
+
+### Conditional operators
+
+- Math operators,
+- equality operrators
+- Logical operators
+
+## Terraform workspace
+
+- repeatable tasks wil be further reduced.
