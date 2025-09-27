@@ -335,6 +335,8 @@ output "variable_name"{
 - depends on
 - example below
 
+* for_each
+
 ```
     resource "local_fiel" "pet" {
         filename = var.filename[count.index]
@@ -388,3 +390,39 @@ output "variable_name"{
     }
 
 ```
+
+## versioning constraints
+
+- if we want to set the version for plugin downloads
+- if we do not want to download a particular version.
+
+```
+    terraform {
+        required_providers {
+            local = {
+                source = "hashicorp/local"
+                version = "0.1.1"
+            }
+        }
+    }
+
+```
+
+```
+    terraform {
+        required_providers {
+            local = {
+                source = "hashicorp/local"
+                version = "!=1.1.1"
+            }
+        }
+    }
+
+```
+
+| Use case                             | version                      |
+| ------------------------------------ | ---------------------------- |
+| Specific version                     | "just the version number"    |
+| Not specific version                 | "!=<version_number>"         |
+| Range and not particular version     | "> 1.2.0, < 2.0.0, != 1.4.0" |
+| Tilde, it will download 1.3, 1.4 etc | "~> 1.2"                     |
