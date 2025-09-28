@@ -9,7 +9,7 @@ graph TD
         IGW[Internet Gateway]
     end
 
-    subgraph Private App Subnets (3 AZs)
+    subgraph Private App Subnets 3 AZs
         EC2_1[EC2 / ECS Tasks AZ1]
         EC2_2[EC2 / ECS Tasks AZ2]
         EC2_3[EC2 / ECS Tasks AZ3]
