@@ -15,7 +15,7 @@ graph TD
         EC2_3[EC2 / ECS Tasks AZ3]
     end
 
-    subgraph Private Data Subnets (3 AZs)
+    subgraph Private Data Subnets 3 AZs
         DB_1[RDS / DynamoDB / ElastiCache AZ1]
         DB_2[RDS / DynamoDB / ElastiCache AZ2]
         DB_3[RDS / DynamoDB / ElastiCache AZ3]
