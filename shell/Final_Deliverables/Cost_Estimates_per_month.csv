@@ -1,0 +1,59 @@
+Your Estimate
+Service Type,Components,Region,Component Price,Service Price
+Amazon EC2 Service (Asia Pacific (Sydney)),,,,$5335.43
+,Compute:,Asia Pacific (Sydney),$0
+,EBS Volumes:,Asia Pacific (Sydney),$1380
+,EBS IOPS:,Asia Pacific (Sydney),$7.2
+,EBS Snapshots:,Asia Pacific (Sydney),$16.5
+,Reserved Instances (One-time Fee):,Asia Pacific (Sydney),$3870
+,Application LBs:,Asia Pacific (Sydney),$24.31
+,Network LB,Asia Pacific (Sydney),$37.42
+Amazon S3 Service (Asia Pacific (Sydney)),,,,$2.61
+,Standard Storage:,Asia Pacific (Sydney),$0.75
+,Reduced Redundancy Storage:,Asia Pacific (Sydney),$1.85
+,Standard Put Requests:,Asia Pacific (Sydney),$0
+,Standard Other Requests:,Asia Pacific (Sydney),$0
+,Reduced Redundancy Put Requests:,Asia Pacific (Sydney),$0
+,Reduced Redundancy Other Requests:,Asia Pacific (Sydney),$0
+,Lifecycle Transition Requests into Glacier:,Asia Pacific (Sydney),$0.01
+Amazon Route 53 Service,,,,$0.5
+,Hosted Zones:,Global,$0.5
+Amazon CloudFront Service,,,,$0.28
+,Data Transfer Out:,Global,$0.12
+,Requests:,Global,$0.16
+Amazon DynamoDB Service (Asia Pacific (Sydney)),,,,$311.98
+,Provisioned Throughput Capacity:,Asia Pacific (Sydney),$41.17
+,Indexed Data Storage:,Asia Pacific (Sydney),$13.02
+,DynamoDB Streams:,Asia Pacific (Sydney),$0
+,Reserved Capacity:,Asia Pacific (Sydney),$8.13
+,Reserved Capacity (one-time fee):,Asia Pacific (Sydney),$246.24
+,On-demand backup:,Asia Pacific (Sydney),$1.14
+,Continuous backup (PITR):,Asia Pacific (Sydney),$2.28
+,Restoring a table:,Asia Pacific (Sydney),$0
+,Global Tables:,Asia Pacific (Sydney),$0
+Amazon ElastiCache Service (Asia Pacific (Sydney)),,,,$16.11
+,On-Demand Cache Nodes:,Asia Pacific (Sydney),$16.11
+Amazon CloudWatch Service (Asia Pacific (Sydney)),,,,$0.6
+,Alarms:,Asia Pacific (Sydney),$0.6
+,Dashboard:,Asia Pacific (Sydney),$0
+,Custom events:,Asia Pacific (Sydney),$0
+Amazon SNS Service (Asia Pacific (Sydney)),,,,$0
+,Requests:,Asia Pacific (Sydney),$0
+,Notifications:,Asia Pacific (Sydney),$0
+Amazon Glacier Service (Asia Pacific (Sydney)),,,,$0.27
+,Storage:,Asia Pacific (Sydney),$0.15
+,Retrieval Fees (Standard Tier):,Asia Pacific (Sydney),$0.12
+Amazon VPC Service (Asia Pacific (Sydney)),,,,$36.6
+,VPN Connection:,Asia Pacific (Sydney),$36.6
+AWS Data Transfer In,,,,$0
+,Asia Pacific (Sydney) Region:,Global,$0
+AWS Data Transfer Out,,,,$1.4
+,Asia Pacific (Sydney) Region:,Global,$1.4
+Data Transfer Out to CloudFront,,,,$0
+,Asia Pacific (Sydney) Region:,Global,$0
+AWS Support (Business),,,,$541.58
+,Support for all AWS services:,,$154.58
+,Support for Reserved Instances (One-time Fee):,,$387
+,,Free Tier Discount:,,$-43.75
+,,Total One-Time Payment:,,$4503.24
+,,Total Monthly Payment:,,$1700.37

@@ -97,3 +97,7 @@ graph TD
 | `/lib`    | Contains shared libraries and kernel modules required by the system.          |
 | `/var`    | Stores variable data such as logs, caches, and spool files.                   |
 | `/etc`    | Contains system configuration files and scripts.                              |
+
+## DNS
+
+- Very good here, rip it from the course later
