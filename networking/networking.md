@@ -14,7 +14,7 @@
 | **2. Data Link**    | MAC addressing, switching, ARP, error detection.         | - ENI (Elastic Network Interfaces)<br>- VPC Networking (handles ARP, L2 abstractions)<br>- AWS Outposts Networking                                                       |
 | **1. Physical**     | Transmission of raw bits (cables, fiber, RF).            | - Direct Connect (fiber links)<br>- AWS Global Infrastructure (data centers, AZ links)<br>- Outposts (edge hardware)                                                     |
 
-# OSI Model vs AWS Services (Visual)
+## OSI Model vs AWS Services (Visual)
 
 ```mermaid
 graph TD
@@ -28,3 +28,12 @@ graph TD
 
     A7 --> A6 --> A5 --> A4 --> A3 --> A2 --> A1
 ```
+
+## Load Balancers mapped to OSI layer
+
+| **Load Balancer**                          | **OSI Layer**             | **Function**                                                                                                         |
+| ------------------------------------------ | ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Application Load Balancer (ALB)**        | **Layer 7 – Application** | Operates at HTTP/HTTPS, supports path-based & host-based routing, WebSockets, redirects, WAF integration.            |
+| **Network Load Balancer (NLB)**            | **Layer 4 – Transport**   | Operates at TCP/UDP/TLS level, ultra-low latency, supports millions of requests per second, static IPs.              |
+| **Gateway Load Balancer (GWLB)**           | **Layer 3 – Network**     | Operates at IP packet level, routes traffic to 3rd-party virtual appliances (firewalls, IDS/IPS, packet inspection). |
+| **Classic Load Balancer (CLB)** _(legacy)_ | **Layer 4 & Layer 7**     | Old gen — can do basic TCP (L4) and HTTP/HTTPS (L7), but lacks advanced routing features.                            |
