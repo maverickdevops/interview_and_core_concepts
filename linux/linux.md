@@ -4,11 +4,10 @@
 
 ```mermaid
 graph TD
-    A[User Space] --> B[System Calls]
-    B --> C[Linux Kernel]
-    C --> D[Hardware]
-    C --> E[Device Drivers]
-    C --> F[File System]
+    A[Application/Process] --> B[Linux Kernel]
+    B --> C[Memory]
+    B --> D[CPU]
+    B --> E[Device]
 ```
 
 ## Kernel space and user space
