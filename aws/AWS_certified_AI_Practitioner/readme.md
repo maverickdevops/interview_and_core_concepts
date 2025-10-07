@@ -72,3 +72,73 @@ Inferencing is the process in which AI models make predictions or decisions usin
 
 1. Black box pattern
 2. Lack of interoperability
+
+### ML development lifecycle
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/ML_lifecycle.png)
+
+- AWS provides services for all these stage of ML.
+
+1. Business goals. This is prestage/discovery.
+2. Data collection and preparation
+   Redshift, s3, rds, kinesis, kafka, Glue, ETL, athena, emr etc.
+   Action for me - read and understand what services fit this definition.
+   2.a Data preprossing and Feature engineering.
+   Cleaning the data.
+   Glue, sagemaker.
+   2.b Data Augmentation
+   Artificially increase dataset size through transformation
+   Sagemaker
+3. Training the model.
+   Hyperparameter tuning - increase efficiency and reduce errors.
+   Sagemaker. Automatic model tuning (AMT)
+   Evaluating model performance
+   accuracy, precision, recall, f1 score
+   true positive, false negative etc.
+   Sagemaker, built in tools to evaluate models and track their performance.
+
+4. Model deployment options.
+   everything is containerised.
+   sagemaker, lambda, EMR
+
+5. Monitoring deployed models.
+   Sagemaker, can be used to model monitor to check deviation. Evaluate this against the business goals set.
+   cloudwatch for cpu etc.
+
+This is how it will look
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/ML_pipeline.png)
+
+### MLOps Concepts
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/MLops_Concept.png)
+
+### designing the MLOps pipeline
+
+- sagemaker can be used to build the pipeline.
+- Apache airflow can be used to orchestrate complex workflows.
+
+- Compliance and auditability
+
+- mostly for all the above sagemaker gives the option/service.
+- improve model quality with MLOps. (sagemaker studio)
+- Sagemaker clarify - monitors fairness and bias. ensuring models are accurate and equitable
+- Sagemaker pipelines
+  end to end automation
+  flexible pipeline definiton.
+  workflow visuals
+  seamless integration points
+
+### Model performance metrics.
+
+- Precision (different from accuracy) - Measures correct positive predictions, minimises false positive (use this very we need to be really precise with the model/decision. example spam emails)
+- Recal - Captures actual positives, vital for medical diagnosis. We want to call it out as a problem and then eliminate it saying its not.
+- F1 score - Balance precision and recall. useful for false positve/ negatie tradeoffs.
+
+* Area under the curve (AUC) for binary classification
+* Business metrics.
+* finops
+* CSAT.
+
+### Possible AWS tools for MLOps
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/MLOps_tools.png)
