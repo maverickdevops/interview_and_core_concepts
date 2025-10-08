@@ -142,3 +142,76 @@ This is how it will look
 ### Possible AWS tools for MLOps
 
 ![Alt text](/aws/AWS_certified_AI_Practitioner/images/MLOps_tools.png)
+
+### Overview of AI and ML services.
+
+- Bedrock
+  Is a managed servcie.
+  can host the models
+  for foundation models.
+  Can intergrate with S3, EC2, sagemaker etc
+- Bedrock - guardrails.
+  Ensuring safe and responsible AI
+  Built in xontent moderation
+  Compliance and data privacy features
+  Subservice of Bedrock
+- Bedrock agents
+  can create task and workflow.
+  enhances the fucntions
+  automate complex tasks
+  Orchestrate workflows based on AI output.
+
+- Sagemaker
+  Managed service for quickly building, training and deploying ML models.
+  It simplifies deployments
+  Helps in data preparation
+  Helps with model training
+  auto matic hyperparamic tuning
+
+* Sagemaker key features.
+  Data labelling tools
+  notebook for model development (py??)
+  automatic model tuning
+  scalable deployment
+  easy to use for those with minimal AI expertise,
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/sagemaker_workflow.png)
+
+Before sagemaker
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/sagemaker_workflow_2.png)
+
+- Rekognition
+  Analyses inages and videos for object detection, facial analysis and text recognition.
+  Does near realtime analysis.
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/Rekognition.png)
+
+- Lex
+  Helps building chat bots
+  Virtual assitant for bookings etc
+  Is a Natural language understanding NLU and automatic speach recognition (ASR)
+  Multi channel support
+  managed service
+
+- Polly
+  Text to voice service.
+  it does not have intelligence to do research, it just converts the text to speech.
+  Speech systhesis markup.
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/polly.png)
+
+- Comprehend
+  Figures out, what was the language? what is they talking, sentiment analysis.
+  Key phrase extraction.
+  Search for sensitive info, PII
+  real time processing.
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/comprehend.png)
+
+- Fraud detector
+  Name says its a fraud detector.
+  It checks for fraud before any transaction is done.
+  real time processing, also has an optiont to config batch processing.
+  customisable fraud detection config
+  managed service.
