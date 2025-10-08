@@ -226,5 +226,54 @@ Before sagemaker
 
 - Translate
   - converts language to another language.
+  * needs text to work, voice input is not valid.
 
 ![Alt text](/aws/AWS_certified_AI_Practitioner/images/translate.png)
+
+- Textract
+  - its like an OCR
+  - extracts text from the page/form.
+  - managed service
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/textract.png)
+
+- Glue
+  - Takes data and does ETL.
+  - make it pallatable.
+  - crawler pulls the data into data catalog and works on it.
+  * glue databrew is a subservice
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/glue.png)
+
+- Glue Databrew
+  - Helps in visual data preparation
+  - data profiling.
+  - Can feed the data to Sagemaker.
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/glue1.png)
+
+- Elastic Map reduce.
+  - Allows to run big data workloads.
+  - Hadoop and spark and stuff like that can be run to process the data.
+  * managed hadoop framework.
+  * supports pig, spark etc.
+  * highly scalable and cost effective.
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/emr.png)
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/emr1.png)
+
+- Augmented AI
+  - Build in human review workflow.
+  - if low confidence, it can ask for human review.
+  - Continous learning and improvement for the model.
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/augmented.png)
+
+- QUicksight
+  - visualisation tool
+  - feels like splunk or Tableu.
+  * Uses SPICE engine
+  * Super fast, parallel, inmomory calculation engine
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/quicksight.png)
