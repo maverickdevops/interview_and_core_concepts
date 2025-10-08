@@ -123,10 +123,10 @@ This is how it will look
 - improve model quality with MLOps. (sagemaker studio)
 - Sagemaker clarify - monitors fairness and bias. ensuring models are accurate and equitable
 - Sagemaker pipelines
-  end to end automation
-  flexible pipeline definiton.
-  workflow visuals
-  seamless integration points
+  - end to end automation
+  - flexible pipeline definiton.
+  - workflow visuals
+  - seamless integration points
 
 ### Model performance metrics.
 
@@ -146,34 +146,35 @@ This is how it will look
 ### Overview of AI and ML services.
 
 - Bedrock
-  Is a managed servcie.
-  can host the models
-  for foundation models.
-  Can intergrate with S3, EC2, sagemaker etc
+  - Is a managed servcie.
+  - can host the models
+  - for foundation models.
+  - Can intergrate with S3, EC2, sagemaker etc
 - Bedrock - guardrails.
-  Ensuring safe and responsible AI
-  Built in xontent moderation
-  Compliance and data privacy features
-  Subservice of Bedrock
+  - Ensuring safe and responsible AI
+  - Built in xontent moderation
+  - Compliance and data privacy features
+  - Subservice of Bedrock
 - Bedrock agents
-  can create task and workflow.
-  enhances the fucntions
-  automate complex tasks
-  Orchestrate workflows based on AI output.
+
+  - can create task and workflow.
+  - enhances the fucntions
+  - automate complex tasks
+  - Orchestrate workflows based on AI output.
 
 - Sagemaker
-  Managed service for quickly building, training and deploying ML models.
-  It simplifies deployments
-  Helps in data preparation
-  Helps with model training
-  auto matic hyperparamic tuning
+  - Managed service for quickly building, training and deploying ML models.
+  - It simplifies deployments
+  - Helps in data preparation
+  - Helps with model training
+  - auto matic hyperparamic tuning
 
 * Sagemaker key features.
-  Data labelling tools
-  notebook for model development (py??)
-  automatic model tuning
-  scalable deployment
-  easy to use for those with minimal AI expertise,
+  - Data labelling tools
+  - notebook for model development (py??)
+  - automatic model tuning
+  - scalable deployment
+  - easy to use for those with minimal AI expertise,
 
 ![Alt text](/aws/AWS_certified_AI_Practitioner/images/sagemaker_workflow.png)
 
@@ -277,3 +278,96 @@ Before sagemaker
   * Super fast, parallel, inmomory calculation engine
 
 ![Alt text](/aws/AWS_certified_AI_Practitioner/images/quicksight.png)
+
+### why Generative AI
+
+- Artificial intelligence - learns from data then makes predictions.
+- Generative AI - creates new solutions based on learned data.
+
+\*\* Key difference - AI generally predicts outcomes based on the input data, while generative AI focuses on producing new outputs that resemble the data it was trained on.
+
+### Concepts in generative AI
+
+- Models
+- Transformers
+- Prompt Engineering
+- Inference
+- Context window
+- Token
+- Vector
+- Embeddings
+- Chunking
+- Multi-mode models
+- Diffusion models.
+
+### Models
+
+- models -
+  - the core of generative AI systems, built from neural networks.
+  - use data, neural networks, system resources and prompts to generate outputs
+  - predict the enxt token or word based on learned patterns
+
+### Transformers
+
+- Transformers
+  - A neural network architecture that processes input in parallel.
+  - functional to models like gpt, bert.
+  - enables generative AI to handle long sequence of data efficiently.
+
+### Context window
+
+- Context window
+  - The model's kind of memory span when it generating text
+  - understand relationships between the words and tokens it has already processed.
+  - the portio of input data that a model process at a time.
+  - Determines how much text or data the model can remember and consider when generating output
+  - Larger context windows allow models to handle longer and more complex inputs.
+
+### tokens and tokenisation
+
+- Tokens and tokenisation
+  - Tokens: smallest units of data eg. words or parts of words. In order words its like atoms in physics.
+  - Tokeninsation: The process of breaking down input into tokens.
+  - Essential for how AI models process language and text.
+
+### embeddings and vectors
+
+- Embedding
+  - embedding - numeric representation of words or phrases that capture their meaning.
+  - vectors - ordered lists of numbers that represent data features.
+  - used to understand relationships between tokens in generative AI models
+
+### Chunking
+
+- Chunking
+  - chunking - is used in gen AI to handle large amounts of data by breaking it down into smaller more manageable pieces called "chunks"
+  - makes it easier for AI models tp process and understand the data.
+  - choosing the right data chunk size is the key to getting the most accurate and relevant search results.
+
+### LLM (large language models)
+
+- LLMs
+  - gpt and bert are the examples. they can generate coherent, context-aware text
+  - generative AI models trained on vast amount of text data.
+  - LLMs are fine tuned for specific tasks, making them versatile tools.
+
+### Prompt engineering
+
+- Prompt
+
+  - Prompt - the input or instrcutions given to the model.
+  - prompt engineering - designing prompts to get the desired outcomes.
+  - techniques include - zero-shot, one-shot, and few-shot learning
+
+- Prompt engineering technique
+  - Zero shot - the AI recognises something entirely new without any direct examples using descriptions or related knowledge.
+  - one shot - the AI learns from just one example and can recognise it in the future.
+  - few shot learning - the ai learns from a few examples and can generalise to recognise new instances.
+
+### Multi modal models
+
+- multi modal - they handle different types of data (text, images, audio)
+- they combine multiple data sources to generate richer, more diverse outputs.
+- applications include image captioning, text-to-image generation and more.
+
+- Diffusion models - used to generate high quality images, audio, images. Used in image generation and upscaling
