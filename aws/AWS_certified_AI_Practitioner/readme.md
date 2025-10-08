@@ -284,7 +284,10 @@ Before sagemaker
 - Artificial intelligence - learns from data then makes predictions.
 - Generative AI - creates new solutions based on learned data.
 
-\*\* Key difference - AI generally predicts outcomes based on the input data, while generative AI focuses on producing new outputs that resemble the data it was trained on.
+```
+ Key difference - AI generally predicts outcomes based on the input data, while generative AI focuses on producing new outputs that resemble the data it was trained on.
+
+```
 
 ### Concepts in generative AI
 
