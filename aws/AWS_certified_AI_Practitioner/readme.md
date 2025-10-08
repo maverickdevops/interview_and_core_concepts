@@ -425,7 +425,50 @@ Before sagemaker
   - longr time to train.
 
 - Performance metrics.
+
   - Accuracy
   - Precision
   - Recall
   - F1 score
+
+  * MAP - mean accuracy precision (no idea what this is :( )
+
+* Consider trade-offs
+
+* Customizing pretrained model - Consider trade-offs
+  - fine tuning - small adjustments to pretrained models will get us going quick
+  - Narrow - used for specific tasks
+    vs
+  - Train from start.
+
+## RAG - retrival augmented generation (RAG)
+
+- helps in optimising the performance and get better quality results
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/rag.png)
+
+- Bedrock uses RAG to enchance foundation model performance in customer applications.
+- Bedrock and Kendra use vector databases to enchance foundation model performance in semantic search and document retrival.
+- Document DB can be anything nepture, document, rds etc.
+
+## Selecting pretrained models.
+
+- COnsiderations
+
+  - Availability and compatibility of pretrained models.
+  - regularly maintained and updates.
+  - how much customisation should I be doing?
+  - Interoperability vs explainability. i.e. no more blackbox, will the model tell me how it arrived to this decision/output (inference)
+  - tools like LIME, SHAP can be used for explainability.
+  - more complex models will be having lower or complex explainability.
+  - data privacy considerations.
+  - transfer learning and its benefits.
+
+- additional consideration
+  - Bias,
+  - hardware constraints
+  - explainability
+
+## Inference paramteres and their effects.
+
+- Control over model behaviour and output characteristics.
