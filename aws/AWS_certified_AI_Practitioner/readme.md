@@ -182,36 +182,49 @@ Before sagemaker
 ![Alt text](/aws/AWS_certified_AI_Practitioner/images/sagemaker_workflow_2.png)
 
 - Rekognition
-  Analyses inages and videos for object detection, facial analysis and text recognition.
-  Does near realtime analysis.
+  - Analyses inages and videos for object detection, facial analysis and text recognition.
+  - Does near realtime analysis.
 
 ![Alt text](/aws/AWS_certified_AI_Practitioner/images/Rekognition.png)
 
 - Lex
-  Helps building chat bots
-  Virtual assitant for bookings etc
-  Is a Natural language understanding NLU and automatic speach recognition (ASR)
-  Multi channel support
-  managed service
+
+  - Helps building chat bots
+  - Virtual assitant for bookings etc
+  - Is a Natural language understanding NLU and automatic speach recognition (ASR)
+  - Multi channel support
+  - managed service
 
 - Polly
-  Text to voice service.
-  it does not have intelligence to do research, it just converts the text to speech.
-  Speech systhesis markup.
+  - Text to voice service.
+  - it does not have intelligence to do research, it just converts the text to speech.
+  - Speech systhesis markup.
 
 ![Alt text](/aws/AWS_certified_AI_Practitioner/images/polly.png)
 
 - Comprehend
-  Figures out, what was the language? what is they talking, sentiment analysis.
-  Key phrase extraction.
-  Search for sensitive info, PII
-  real time processing.
+  - Figures out, what was the language? what is they talking, sentiment analysis.
+  - Key phrase extraction.
+  - Search for sensitive info, PII
+  - real time processing.
 
 ![Alt text](/aws/AWS_certified_AI_Practitioner/images/comprehend.png)
 
 - Fraud detector
-  Name says its a fraud detector.
-  It checks for fraud before any transaction is done.
-  real time processing, also has an optiont to config batch processing.
-  customisable fraud detection config
-  managed service.
+  - Name says its a fraud detector.
+  - It checks for fraud before any transaction is done.
+  - real time processing, also has an optiont to config batch processing.
+  - customisable fraud detection config
+  - managed service.
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/Fraud.png)
+
+- Transcribe
+  - Convert voice or videos into text.
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/transcribe.png)
+
+- Translate
+  - converts language to another language.
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/translate.png)
