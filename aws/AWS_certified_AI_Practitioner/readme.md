@@ -371,3 +371,30 @@ Before sagemaker
 - applications include image captioning, text-to-image generation and more.
 
 - Diffusion models - used to generate high quality images, audio, images. Used in image generation and upscaling
+
+## Generative AI use cases
+
+## Architecture behind Gen AI
+
+- GAN - Generative Adversarial Network
+- VAE - Variational autoencoder
+- Transformers
+
+## Generative AI Project Lifecycle - intro
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/GenAI_lifecycle.png)
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/GenAI_usecases.png)
+
+## AWS infra for building the Gen AI
+
+- Partyrock - is good place to play with bedrock using the app.
+- Vector databases
+- AWS Nitro - enchanced security and performance
+
+## Cost considerarion
+
+- Balance needs with the cost.
+-
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/cost_performance.png)
