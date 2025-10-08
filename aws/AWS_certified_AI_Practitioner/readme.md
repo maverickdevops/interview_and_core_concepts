@@ -398,3 +398,31 @@ Before sagemaker
 -
 
 ![Alt text](/aws/AWS_certified_AI_Practitioner/images/cost_performance.png)
+
+## Design considerations for Foundation model
+
+- balancing accuracy and inference speed
+
+  - KNN model -> high computational work
+  - Complex model -> realtime decision making.
+
+- Modality consideration
+  refers to the types of input data a model can handle.
+
+- Choosing the right architecture
+  - CNN - Convolutional neural network
+    - Prdominently used for image recognition
+  - RNN - Recurrent neural network
+    - used for speech and text.
+- Complexity and resource requirements.
+
+  - high complexity = higher accuracy.
+  - high resource consumption,
+  - expensive.
+  - longr time to train.
+
+- Performance metrics.
+  - Accuracy
+  - Precision
+  - Recall
+  - F1 score
