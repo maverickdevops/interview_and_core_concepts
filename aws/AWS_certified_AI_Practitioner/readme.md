@@ -472,3 +472,167 @@ Before sagemaker
 ## Inference paramteres and their effects.
 
 - Control over model behaviour and output characteristics.
+
+* inference generates a model's output from the input provided - like prompt
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/inference_patterns.png)
+
+- example look at the temperature.
+
+  - low temp - more predictable, less creative.
+  - high temp - less predictable, more creative.
+
+- Response length
+
+  - limit the response length. if the user enters a single word vs a story response must be a decent length.
+
+- penalities and stop sequences
+
+  - Penalities - discourage repetition in responses.
+    - prevent model from repeating phrases
+  - Stop sequence - define when to stop the response
+    - useful for tasks like form filling or bullet lists.
+
+- Balancing diversity and coherence.
+
+  - needed for effective responses.
+
+- Mitigating Hallucinations with inference parameters
+  - Lowering the randomness related parameters will mitigate the risk of hallucination.
+  - this is very important for critical systems to ensure reliable outputs.
+  - Law, justice, medical and health, avaition, trading etc.
+
+# Retrieval Augmented Generation (RAG)
+
+- What is RAG?
+
+  - RAG is a method that basically combines two key components, large language model generation and information retrieval.
+  - Goal of RAG is to retrieve the information from large language model and ingest it into the model, especially when the prompt is made
+  - key for improving the accuracy and releavance in AI Tasks
+
+- what are prompts in RAG?
+  - A prompt is the user's input that guides model responses.
+  - can include contextual data to enrich outputs, data can be - documents, web pages, blogs, user documentation, tech docs etc
+
+* Vector Databases.
+
+  - the backbone of RAG
+  - store structured and unstructured data as vector embeddings.
+  - efficient retrieval of semantically relevant info
+
+* Amazon Bedrock
+
+  - uses RAG
+
+* Building knowledge bases for RAG
+
+  - knowledge bases store external data to improve model responses.
+  - a central repository for semantially relevant information.
+
+* Cost consideration for RAG
+
+  -
+
+* Challenges and limitations of RAG
+  - requires robust infra for data retrieval
+  - data privacy and security consideration
+
+## Vector Databases
+
+- Intro
+
+  - vector databases primarily store data as embeddings, which are numerical representations of data like text and images. they are mathematical representations. and embeddings are meanings like the semantic meaningful relationships between these numerical vectors.
+  - AWS OpenSearch (formerly Elastic Search)- managed service.
+  - scalable infra to handle large gen AI models.
+
+- Opensearch key features
+
+  - k-nearest neighbors (k-NN) for efficient vector queries,
+
+- Aurora, PostgreSQL compatible edition and RDS for PostgreSQL support pgvector.
+
+- Amazon Neptune ML. (not Amazon Neptune)
+  Graph neural networks (GNN) enhance predictions using complex graph relationships.
+  Leverages deep graph library (DGL) to simplify model selection and training.
+  Achieves 50% greater accuracy in predictions for graph data.
+
+- Amazon MemoryDB
+
+  - in memory DB
+  - High throughput with a microsecond read and single digit millisecond write latency
+  - supports millions of vectors for ML with single digit query latency for updates times.
+  - handles tens of thousands of queries per sec
+  - Multi AZ option available, which will eliminate the cache and primary DB management overhead.
+
+- Amazon DocumentDB (with MongoDB compatibility) supports vector search.
+  - fully managed JSON document DB
+  - vector search: store, index, and search millions of vectors
+  - integrates with Bedrock, sagemaker, third party ML models to support vector storage.
+  - enables interactive log analytics, real time application monitoring and website search.
+
+* RAG with Bedrock and custom knowledgebases.
+  - Bedrock has its own custom knoledgbase services.
+
+## Foundation Model
+
+- Model customization.
+
+  - why do we customize foundation models?
+
+    - We can train the models from sratch. there is all feasible availability and option.
+    - however, it comes with significant
+      - High infra costs i.e. storage, compute
+      - long dev cycles.
+      - requires vast datasets.
+      - Bias etc.
+
+  - If we have a pre-trained models, we can fine tune it. By avoiding the above overhead.
+
+    - Low cost and time.
+    - requires smaller datasets
+    - cycle time is faster.
+
+  - In Context learning.
+
+    - Most cost effective.
+    - Less customization.
+    - Moderate accuracy.
+
+  - RAG
+    - Highly efficient.
+    - Ongoing maintenance
+    - Increased complexity.
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/model_cost_compare.png)
+
+- WHy choose "Pre Training"?
+  - Highly tailored solutions.
+  - Unique specialized.
+  - Demands vast, quality datasets.
+  - time luxury
+  - not suitable for short term or limited budget
+
+* WHy choose "Fine tuning"?
+
+  - Can leverage pre trained models.
+  - faster and more economical.
+  - suitable for wide range of AI applications.
+  - Within moderate budget.
+  - Less data for pre-training.
+
+* Why choose "In Context"?
+
+  - Ideal for fast, flexible and low cost
+  - eliminates overhead of fine tuning.
+  - suitable for chat bots, quick content generation.
+  - Allows embedding examples directly in the input prompt
+  - quick adaptability.
+  - may fall short for highly specialised tasks requiring deep customization.
+
+* Why choose RAG?
+  - Ideal for realtime access to external knowledge.
+  - Suitable for question answer and customer support.
+  - provides accurate up to date responses.
+  - relies on data retrieval from external surces.
+  - requires management of external infra.
+  - increases complexity and implementation of costs.
