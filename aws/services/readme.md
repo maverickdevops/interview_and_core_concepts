@@ -40,4 +40,4 @@
 - 140,000 - max packets per second.
 - MTU(max transmission unit) - +1400
 
-- we can scale it by using ECMP via multiple VPN tunnels.
+- we can scale it by using [ECMP](https://github.com/maverickdevops/interview_and_core_concepts/blob/main/networking/networking.md#bgp-border-gateway-protocol) via multiple VPN tunnels.
