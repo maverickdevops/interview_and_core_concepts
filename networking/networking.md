@@ -63,3 +63,31 @@ flowchart TD
 
     A --> B --> C --> D --> E --> F --> G --> H --> I --> J
 ```
+
+## BGP (Border Gateway Protocol)
+
+- It is the protocol which makes the internet work.
+
+```
+Think of the Internet as a huge web of thousands of independent networks (ISPs, cloud providers, large enterprises).
+Each of these is an Autonomous System (AS) — a network managed by one organization.
+
+BGP is how these systems talk to each other and decide the best paths for sending data.
+
+```
+
+#### How it works?
+
+- Routers exchange routes using BGP messages.
+- Each route advertisement says:
+  - “To reach network X, send traffic to me — and here’s the path I’ll take.”
+- Routers then choose the best path based on rules like:
+  - AS path length (fewer hops = better)
+  - Local preference
+  - MED (Multi-Exit Discriminator)
+  - Route origin type, etc.
+
+#### Types of BGP
+
+- eBGP - external BGP, that is how internet works.
+- iBGP - internal BGP, that is how things work within an organisation.
