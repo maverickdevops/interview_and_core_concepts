@@ -91,3 +91,16 @@ BGP is how these systems talk to each other and decide the best paths for sendin
 
 - eBGP - external BGP, that is how internet works.
 - iBGP - internal BGP, that is how things work within an organisation.
+
+## ECMP (Equal cost MultiPath Routing)
+
+- in this case, a router picks one best route to a destination (based on lowest cost/metric). With ECMP, if there are multiple equally good routes, the router can use all of them at the same time.
+  Example:
+  If there are two links between your datacenter and AWS — both 10 Gbps and equal cost — ECMP will send traffic across both instead of wasting one as backup.
+
+#### How it works?
+
+- The router has multiple next hops (paths) with equal cost in its routing table.
+- It uses a hashing algorithm (based on source/destination IP, port, etc.) to decide which path each flow uses.
+- This keeps packets in the same session on the same path (avoiding packet reordering).
+- If one path fails, traffic is automatically shifted to the remaining paths.
