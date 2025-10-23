@@ -636,3 +636,41 @@ Before sagemaker
   - relies on data retrieval from external surces.
   - requires management of external infra.
   - increases complexity and implementation of costs.
+
+## Agents for multi step tasks
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/agent_multistep.png)
+
+## Prompt Engineering
+
+- Task
+- Context
+- Input text
+
+- Constructs
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/prompt_construct.png)
+
+- Zero shot prompting
+- one shot prompting
+- few shot prompting
+- Chain of thought prompting - don't give an answer, but explain me the way you arrived at this answer. THe logic behind it.
+
+* Create prompt templates - for Q&A, Summarisation and code generation etc. Useful for consistency and efficiency for multiple tasks.
+
+* Prompt Tuning
+
+  - Fine tunes the model by optimizing the prompt's continuous embedding during training.
+  - keeps the rest of the model parameters frozen.
+
+* Latent space and prompts
+
+  - Latent space represents the model's encoded knowledge and patterns.
+
+* Bedrock has a service called "Guardrails" to block few words, hijacking, jailbreaking, poisoning etc.
+
+* Prompt Injection
+  - the type of attack where an untrusted input manipulates a trusted prompt.
+    Example
+
+![Alt text](/aws/AWS_certified_AI_Practitioner/images/prompt_injection.png)
