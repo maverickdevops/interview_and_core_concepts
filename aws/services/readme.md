@@ -41,3 +41,23 @@
 - MTU(max transmission unit) - +1400
 
 - we can scale it by using [ECMP](https://github.com/maverickdevops/interview_and_core_concepts/blob/main/networking/networking.md#ecmp-equal-cost-multipath-routing) via multiple VPN tunnels.
+
+## VPC Peering
+
+- 2 or more VPCs cannot talk to each other by itself. this is by design.
+- use VPC peering to make them talk.
+  - Between VPCs in same region
+  - VPCs in different regions.
+  - VPCs in different AWS accounts.
+- No charge for creating VPC peering.
+- but data transfer using the peering between AZs is charged. within same AZ its not charged.
+- VPC 1 wants to peer with VPC2, VPC owner will need to raise a peering request. VPC2 owner wil get notified and has to accept the request.
+- In order to make 1 and 2 talk to each other, we need to create a routing table.
+  - VPC1
+    - destination - CIDR of VPC2.
+    - target - "peering name"
+  - VPC2
+    - destination - CIDR of VPC1
+    - target - "peering name"
+
+![Alt text](/aws/services/images/vpc-peering.png)
