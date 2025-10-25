@@ -674,3 +674,10 @@ Before sagemaker
     Example
 
 ![Alt text](/aws/AWS_certified_AI_Practitioner/images/prompt_injection.png)
+
+
+## Training and Fine-Tuning foundational models
+
+* Pre Training
+* Fine tuning
+* Continuous pre-training. 

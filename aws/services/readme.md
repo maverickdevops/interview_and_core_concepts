@@ -61,3 +61,5 @@
     - target - "peering name"
 
 ![Alt text](/aws/services/images/vpc-peering.png)
+
+scp -i ec2-user.pem ec2-user.pem ec2-user@54.198.20.220:~/
